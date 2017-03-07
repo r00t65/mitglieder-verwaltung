@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rt.mitgliederVerwaltung.controller.TabellenAnsichtWettkampf">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1024.0">
+            <top>
+                <VBox BorderPane.alignment="CENTER">
+                    <children>
+                        <MenuBar blendMode="SRC_ATOP">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="Datei">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Importieren" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Bearbeiten">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Neu" />
+                                        <MenuItem mnemonicParsing="false" text="Löschen" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Help">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="About" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                        <HBox>
+                            <children>
+                                <Button mnemonicParsing="false" text="Schließen" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <TableView fx:id="ergebnisListe" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn  text="ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn  text="Name">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="namet" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn  text="Gesamt">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="total" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Gesamt Zehntel">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="totalz" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Serien">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="series" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Serien Zehntel">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="seriesz" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Tiefschuss">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="best" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

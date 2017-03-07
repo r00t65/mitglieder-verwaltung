@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rt.mitgliederVerwaltung.view.MitgliederBearbeitenController">
+   <children>
+      <BorderPane prefHeight="480.0" prefWidth="640.0">
+         <bottom>
+            <HBox fx:id="actionParent" alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Abbrechen">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="Speichern">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="228.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="387.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Mitglieds Nr." />
+                  <Label text="Ausweis Nr." GridPane.rowIndex="1" />
+                  <Label text="Nachname" GridPane.rowIndex="2" />
+                  <Label text="Vorname" GridPane.rowIndex="3" />
+                  <Label text="Straße" GridPane.rowIndex="4" />
+                  <Label text="E-Mail Adresse" GridPane.rowIndex="9" />
+                  <Label text="Eintritts Datum" GridPane.rowIndex="8" />
+                  <Label text="Geburtstag" GridPane.rowIndex="7" />
+                  <Label text="Ort" GridPane.rowIndex="6" />
+                  <Label text="Postleitzahl" GridPane.rowIndex="5" />
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="cityField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
