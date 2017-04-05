@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+de.rtDevelopment.mitgliederVerwaltung.MainApp-Class: de.rtDevelopment.mitgliederVerwaltung.MainApp
+
