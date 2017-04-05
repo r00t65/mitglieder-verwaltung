@@ -1,4 +1,4 @@
-package rt.mitgliederVerwaltung.model;
+package de.rtDevelopment.mitgliederVerwaltung.model;
 
 import java.util.*;
 

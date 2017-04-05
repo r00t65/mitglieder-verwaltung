@@ -1,14 +1,11 @@
-package rt.mitgliederVerwaltung.view;
+package de.rtDevelopment.mitgliederVerwaltung.view;
 import java.io.IOException;
 
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import rt.mitgliederVerwaltung.MainApp;
+import de.rtDevelopment.mitgliederVerwaltung.MainApp;
 
 public class MainAppController extends BorderPane {
 
@@ -35,9 +32,9 @@ public class MainAppController extends BorderPane {
 
         try {
 
-            loader.setLocation(MainApp.class.getResource("view/MitgliederAnsicht.fxml"));
+            loader.setLocation(MainApp.class.getResource("view/MemberTab.fxml"));
             this.mitglieder.getChildren().setAll((AnchorPane) loader.load());
-            MitgliederAnsichtController mac = loader.getController();
+            MemberTabController mac = loader.getController();
             mac.setMainApp(mainApp);
 
         } catch (Exception e) {

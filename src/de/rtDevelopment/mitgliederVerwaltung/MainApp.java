@@ -1,9 +1,9 @@
-package rt.mitgliederVerwaltung;
+package de.rtDevelopment.mitgliederVerwaltung;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import rt.mitgliederVerwaltung.view.MainAppController;
+import de.rtDevelopment.mitgliederVerwaltung.view.MainAppController;
 
 public class MainApp extends Application {
 
@@ -21,12 +21,12 @@ public class MainApp extends Application {
 
     }
 
-//    public boolean showPersonEditDialog(Mitglied mitglied) {
+//    public boolean showPersonEditDialog(Member mitglied) {
 //        try {
-//            FXMLLoader loader = new FXMLLoader(MitgliederAnsichtController.class.getResource("MitgliederBearbeiten.fxml"));
+//            FXMLLoader loader = new FXMLLoader(MemberTabController.class.getResource("MitgliederBearbeiten.fxml"));
 //            AnchorPane page = loader.load();
 //            Stage dialogStage = new Stage();
-//            dialogStage.setTitle("Mitglied bearbeiten");
+//            dialogStage.setTitle("Member bearbeiten");
 //            dialogStage.initModality(Modality.WINDOW_MODAL);
 //            Scene scene = new Scene(page);
 //            dialogStage.setScene(scene);

@@ -1,11 +1,9 @@
-package rt.mitgliederVerwaltung.view;
+package de.rtDevelopment.mitgliederVerwaltung.view;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import rt.mitgliederVerwaltung.model.Mitglied;
+import de.rtDevelopment.mitgliederVerwaltung.model.member.Member;
 
 /**
  * Dialog to edit details of a person.
@@ -29,7 +27,7 @@ public class MitgliederBearbeitenController {
 
 
     private Stage dialogStage;
-    private Mitglied mitglied;
+    private Member mitglied;
     private boolean okClicked = false;
 
     /**
@@ -54,17 +52,17 @@ public class MitgliederBearbeitenController {
      *
      * @param mitglied
      */
-    public void setMitglied(Mitglied mitglied) {
-        this.mitglied = mitglied;
-
-        firstNameField.setText(mitglied.getVorname());
-        lastNameField.setText(mitglied.getName());
-        streetField.setText(mitglied.getStrasse());
-        postalCodeField.setText(mitglied.getPostleitzahl());
-        cityField.setText(mitglied.getOrt());
-        birthdayField.setText(mitglied.getGeb());
-        birthdayField.setPromptText("dd.mm.yyyy");
-    }
+//    public void setMitglied(Member mitglied) {
+//        this.mitglied = mitglied;
+//
+//        firstNameField.setText(mitglied.getVorname());
+//        lastNameField.setText(mitglied.getName());
+//        streetField.setText(mitglied.getStrasse());
+//        postalCodeField.setText(mitglied.getPostleitzahl());
+//        cityField.setText(mitglied.getOrt());
+//        birthdayField.setText(mitglied.getGeb());
+//        birthdayField.setPromptText("dd.mm.yyyy");
+//    }
 
     /**
      * Returns true if the user clicked OK, false otherwise.
@@ -79,27 +77,27 @@ public class MitgliederBearbeitenController {
      * Called when the user clicks ok.
      */
     @FXML
-    private void handleOk() {
-        if (isInputValid()) {
-            mitglied.setVorname(firstNameField.getText());
-            mitglied.setName(lastNameField.getText());
-            mitglied.setStrasse(streetField.getText());
-            mitglied.setPostleitzahl(postalCodeField.getText());
-            mitglied.setOrt(cityField.getText());
-            mitglied.setGeb(birthdayField.getText());
-
-            okClicked = true;
-            dialogStage.close();
-        }
-    }
+//    private void handleOk() {
+//        if (isInputValid()) {
+//            mitglied.setVorname(firstNameField.getText());
+//            mitglied.setName(lastNameField.getText());
+//            mitglied.setStrasse(streetField.getText());
+//            mitglied.setPostleitzahl(postalCodeField.getText());
+//            mitglied.setOrt(cityField.getText());
+//            mitglied.setGeb(birthdayField.getText());
+//
+//            okClicked = true;
+//            dialogStage.close();
+//        }
+//    }
 
     /**
      * Called when the user clicks cancel.
      */
-    @FXML
-    private void handleCancel() {
-        dialogStage.close();
-    }
+//    @FXML
+//    private void handleCancel() {
+//        dialogStage.close();
+//    }
 
     /**
      * Validates the user input in the text fields.
