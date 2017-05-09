@@ -4,11 +4,11 @@ import de.rtDevelopment.mitgliederVerwaltung.model.member.Member;
 
 import java.util.stream.Stream;
 
-public interface DatabasePlugin {
+public interface Plugin {
 
+    String getName();
+    Stream<String> getFeatures();
     String getType();
+    Stream<Member> useFeature(String feature, Stream<Member> member);
 
-    void write(Stream<Member> memberStream);
-
-    Stream<Member> read();
 }

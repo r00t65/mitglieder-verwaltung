@@ -1,9 +1,13 @@
 package de.rtDevelopment.mitgliederVerwaltung;
 
+import de.rtDevelopment.mitgliederVerwaltung.controller.PluginManager;
+import de.rtDevelopment.mitgliederVerwaltung.plugins.Plugin;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import de.rtDevelopment.mitgliederVerwaltung.view.MainAppController;
+
+import java.util.List;
 
 public class MainApp extends Application {
 
@@ -18,6 +22,7 @@ public class MainApp extends Application {
         stage.setScene(new Scene(controller));
         stage.setTitle("SBK Manager");
         stage.show();
+
 
     }
 

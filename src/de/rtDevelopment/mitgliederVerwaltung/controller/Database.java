@@ -1,34 +1,34 @@
 package de.rtDevelopment.mitgliederVerwaltung.controller;
 
 import de.rtDevelopment.mitgliederVerwaltung.model.member.Member;
-import de.rtDevelopment.mitgliederVerwaltung.plugins.DatabasePlugin;
+import de.rtDevelopment.mitgliederVerwaltung.plugins.Plugin;
 
 import java.util.*;
 import java.util.stream.Stream;
 
 public class Database {
 
-    public static void write(Stream<Member> memberStream) {
-        ServiceLoader<DatabasePlugin> database = ServiceLoader.load(DatabasePlugin.class);
+    private static List<Plugin> plugins = PluginManager.loadPlugins();
 
-        for (DatabasePlugin plugin : database) {
+    public static void write(Stream<Member> memberStream) {
+        for(Plugin plugin : plugins){
+
             if (!plugin.getType().equals("csv")) {
                 continue;
             }
 
-            plugin.write(memberStream);
+            plugin.useFeature("write", memberStream);
         }
     }
 
     public static Stream<Member> read() {
-        ServiceLoader<DatabasePlugin> database = ServiceLoader.load(DatabasePlugin.class);
+        for(Plugin plugin : plugins){
 
-        for (DatabasePlugin plugin : database) {
             if (!plugin.getType().equals("csv")) {
                 continue;
             }
 
-            return  plugin.read();
+            return  plugin.useFeature("read", null);
         }
 
         return null;
